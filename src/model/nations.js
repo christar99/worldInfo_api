@@ -12,7 +12,7 @@ Nations.findByName = (req, result) => {
 
     connection.query(query, [req.query.idx], (err, res) => {
         if (err) {
-            console.log("error: ", err);
+            console.log("error: " + err);
             result(null, err);
         } else {
             result(null, res);
