@@ -5,10 +5,7 @@ let Nations = (nation) => {
 };
 
 Nations.findByName = (req, result) => {
-    let query =
-        req.query.name === undefined
-            ? "SELECT * FROM nation_list"
-            : "SELECT * FROM nation_list WHERE name = ?";
+    let query = req.query.name === "SELECT * FROM nation_list";
 
     connection.query(query, [req.query.idx], (err, res) => {
         if (err) {
